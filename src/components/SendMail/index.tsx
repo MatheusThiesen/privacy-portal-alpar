@@ -1,5 +1,5 @@
 import { FormEvent, ChangeEvent, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import type { NextPage } from "next";
 
 import styles from "./styles.module.scss";
@@ -84,12 +84,12 @@ export const SendMail: NextPage<SendMailProps> = () => {
         <input name="email" type="text" onChange={handleChange} />
       </div>
 
-      <aside style={{ display: "none" }}>
+      {/* <aside style={{ display: "none" }}>
         <ReCAPTCHA
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA || ""}
           onChange={(e) => console.log(e)}
         />
-      </aside>
+      </aside> */}
       <button className={validMail() ? styles.active : undefined} type="submit">
         Enviar
       </button>

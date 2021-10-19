@@ -75,7 +75,10 @@ export const Accordion: NextPage<AccordionProps> = ({
             <BiChevronDown />
           </div>
 
-          <div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => handleActive(question.title)}
+          >
             <p className={styles.accordionTextActive}>{question.subTitle}</p>
           </div>
           <div

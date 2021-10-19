@@ -37,6 +37,7 @@
     flex-direction: row;
     max-width: 1440px;
     margin: 0 20%;
+    position: relative;
 
     .link {
       position: sticky;
@@ -44,6 +45,16 @@
       color: var(--red-logo);
       margin-top: 3rem;
       margin-left: 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      @media (max-width: 640px) {
+        position: absolute;
+        top: 150px;
+      }
     }
 
     @media (max-width: 1200px) {

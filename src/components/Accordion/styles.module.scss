@@ -1,0 +1,147 @@
+.container {
+  width: 35rem;
+  margin: 0 auto;
+
+  @media (max-width: 1366px) {
+    margin: 0;
+    width: 75%;
+  }
+
+  @media (max-width: 640px) {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  & > article {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: 0;
+
+    border-top: 1px solid #e2e2e2;
+
+    &:last-child {
+      border-bottom: 1px solid #e2e2e2;
+    }
+  }
+}
+
+.accordionTitle {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.875rem 0;
+  font-size: 1.485rem;
+  font-weight: 700;
+  text-align: start;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordionTitleInative {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.875rem 0;
+  font-size: 1.485rem;
+  font-weight: 700;
+  text-align: start;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.accordionText {
+  font-size: 18px;
+  line-height: 1.56;
+  color: #555;
+  background: #fff;
+
+  transition: all 0.1s ease-out;
+  max-height: 0;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+
+  p {
+    font-size: 100%;
+    line-height: 1.56;
+    color: #555;
+    vertical-align: baseline;
+    text-align: start;
+
+    transition: all 0.1s;
+    // font-size: 0.875rem;
+  }
+
+  div {
+    display: none;
+  }
+
+  div + div {
+    margin-top: 1rem;
+  }
+
+  h3 {
+    color: var(--gray-400);
+    font-size: 1.2rem;
+  }
+
+  ul {
+    padding: 0 1rem;
+    li {
+      font-size: 0.875rem;
+    }
+    li + li {
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+.accordionTextActive {
+  font-size: 18px;
+  line-height: 1.56;
+  color: #555;
+  background: #fff;
+
+  transition: all 0.3s ease-out;
+  margin-bottom: 24px;
+  z-index: 1;
+  opacity: 1;
+  text-align: start;
+
+  p {
+    font-size: 100%;
+    line-height: 1.56;
+    color: #555;
+    vertical-align: baseline;
+    text-align: start;
+
+    transition: all 0.1s;
+    // font-size: 0.875rem;
+  }
+
+  div + div {
+    margin-top: 1rem;
+  }
+
+  h3 {
+    color: var(--gray-400);
+    font-size: 1.2rem;
+  }
+
+  ul {
+    padding: 0 1rem;
+    li {
+      font-size: 0.875rem;
+    }
+    li + li {
+      margin-top: 0.4rem;
+    }
+  }
+}

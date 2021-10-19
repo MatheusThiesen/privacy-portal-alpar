@@ -1,0 +1,46 @@
+.container {
+  list-style: none;
+  position: sticky;
+  top: 97px;
+
+  li {
+    padding: 8px 1rem;
+    color: var(--gray-400);
+    white-space: nowrap;
+    transition: color 0.15s;
+
+    &:hover {
+      font-weight: 600;
+      position: relative;
+      color: var(--red-logo);
+
+      &:after {
+        content: "";
+        position: absolute;
+
+        top: calc(100% / 4);
+        left: 0;
+        height: 50%;
+        width: 2px;
+        background: var(--red-logo);
+      }
+    }
+  }
+
+  .active {
+    font-weight: 600;
+    position: relative;
+    color: var(--red-logo);
+
+    &:after {
+      content: "";
+      position: absolute;
+
+      top: calc(100% / 4);
+      left: 0;
+      height: 50%;
+      width: 2px;
+      background: var(--red-logo);
+    }
+  }
+}

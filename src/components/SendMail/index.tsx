@@ -1,5 +1,5 @@
-import { FormEvent, ChangeEvent, useState } from "react";
-// import ReCAPTCHA from "react-google-recaptcha";
+import { FormEvent, ChangeEvent, useState, useRef, useEffect } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import type { NextPage } from "next";
 
 import styles from "./styles.module.scss";
@@ -15,13 +15,25 @@ interface MailProps {
 interface SendMailProps {}
 
 export const SendMail: NextPage<SendMailProps> = () => {
+  const recaptchaRef = useRef(null);
+
   const [emailSent, setEmailSent] = useState(false);
   const [data, setData] = useState<MailProps>({} as MailProps);
+  const [update, setUpdate] = useState(1);
+  const [isValid, setIsValid] = useState<boolean>(false);
+
+  useEffect(
+    () => {
+      setIsValid(validMail());
+    },
+    //@ts-ignore
+    [recaptchaRef, data, update]
+  );
 
   async function handleSend(event: FormEvent) {
     event.preventDefault();
 
-    if (!validMail()) return;
+    if (!isValid) return;
 
     const response = await api.post("/mail", data);
 
@@ -40,6 +52,11 @@ export const SendMail: NextPage<SendMailProps> = () => {
     if (!data.email || !reg.test(data.email)) return false;
     if (!data.name) return false;
     if (!data.type) return false;
+
+    //@ts-ignore
+    const recaptchaValue = recaptchaRef.current.getValue();
+
+    if (!recaptchaValue) return false;
 
     return true;
   }
@@ -84,13 +101,14 @@ export const SendMail: NextPage<SendMailProps> = () => {
         <input name="email" type="text" onChange={handleChange} />
       </div>
 
-      {/* <aside style={{ display: "none" }}>
+      <aside>
         <ReCAPTCHA
+          ref={recaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA || ""}
-          onChange={(e) => console.log(e)}
+          onChange={() => setUpdate(update + 1)}
         />
-      </aside> */}
-      <button className={validMail() ? styles.active : undefined} type="submit">
+      </aside>
+      <button className={isValid ? styles.active : undefined} type="submit">
         Enviar
       </button>
     </form>

@@ -74,7 +74,7 @@ const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({ setOption }) => {
               marginZero
               questions={[
                 {
-                  title: "Pelo seu cadastro na alpar",
+                  title: "Pelo seu cadastro na Alpar",
                   subTitle:
                     "Quando você cria uma conta em algum dos portais da Alpar do Brasil, nós perguntamos dados como nome, e-mail, data de nascimento, gênero e endereço para que você crie um login e senha.",
                   response:

@@ -61,8 +61,8 @@ export const Accordion: NextPage<AccordionProps> = ({
       }}
       className={styles.container}
     >
-      {questions.map((question) => (
-        <article>
+      {questions.map((question, index) => (
+        <article key={index}>
           <div
             onClick={() => handleActive(question.title)}
             className={

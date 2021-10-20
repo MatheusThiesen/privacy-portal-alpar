@@ -33,9 +33,9 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     `;
 
     const response = await transporter.sendMail({
-      from: `${process.env.SMTP_TO_NAME} < ${process.env.SMTP_TO_MAIL}>`,
-      to: `${process.env.SMTP_FROM_NAME} < ${process.env.SMTP_FROM_MAIL}>`,
-      bcc: "Portal Alpar <portal@alpardobrasil.com.br>",
+      from: process.env.SMTP_FROM_MAIL,
+      to: process.env.SMTP_TO_MAIL?.split(","),
+      bcc: process.env.SMTP_FROM_MAIL,
 
       subject: subject,
       html: html,

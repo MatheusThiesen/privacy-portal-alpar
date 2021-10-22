@@ -384,7 +384,7 @@ const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({ setOption }) => {
                 {
                   title: "Como entrar em contato",
                   response:
-                    "Essa Política é parte de um processo contínuo que busca utilizar suas informações da maneira mais segura e ética. Totalmente pensado para você. Por isso, é muito importante para gente ouvir de você e conhecer suas impressões sobre o que conversamos aqui. O encarregado pelas questões de privacidade na Alpar do Brasil é a Vinicius Campos. Você poderá entrar em contato preenchendo o formulário abaixo:",
+                    "Essa Política é parte de um processo contínuo que busca utilizar suas informações da maneira mais segura e ética. Totalmente pensado para você. Por isso, é muito importante para gente ouvir de você e conhecer suas impressões sobre o que conversamos aqui. O encarregado pelas questões de privacidade na Alpar do Brasil é o Vinicius Campos. Você poderá entrar em contato preenchendo o formulário abaixo:",
                   Component: SendMail,
                 },
               ]}

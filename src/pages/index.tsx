@@ -72,9 +72,8 @@ const Home: NextPage<HomeProps> = ({ setOption }) => {
             <p>
               Entenda quais dados pessoais coletamos e como eles são usados,
               compartilhados e protegidos. A política se aplica a todos os
-              serviços e produtos da Alpar, sejam impressos ou digitais, por
-              meio de sites e aplicativos, como Alparhub, Portal Alpar e Alpar
-              do Brasil.
+              serviços e produtos da Alpar do Brasil, sejam impressos ou
+              digitais, por meio de sites e aplicativos.
             </p>
 
             <Link href="privacy-policy">
@@ -82,7 +81,7 @@ const Home: NextPage<HomeProps> = ({ setOption }) => {
                 Política de privacidade na íntegra <BiChevronRight />
               </a>
             </Link>
-            <Link href="pdf/politica_privicidade_alpar.pdf">
+            <Link href="pdf/21-10-2021-Política_de_Privacidade.pdf">
               <a target="_blank">
                 Baixar versão PDF <BiChevronRight />
               </a>

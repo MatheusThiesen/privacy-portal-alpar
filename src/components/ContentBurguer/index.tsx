@@ -17,7 +17,7 @@ export const ContentBurguer: NextPage<ContentBurguerProps> = ({
   return (
     <div className={isActive ? styles.container : styles.containerOff}>
       <div className={styles.content}>
-        <Link href="/">
+        <Link href="/" prefetch>
           <a
             onClick={() => {
               setOption("general");
@@ -28,7 +28,7 @@ export const ContentBurguer: NextPage<ContentBurguerProps> = ({
             Visão geral
           </a>
         </Link>
-        <Link href="/privacy-policy">
+        <Link href="/privacy-policy" prefetch>
           <a
             onClick={() => {
               setOption("privacy-policy");

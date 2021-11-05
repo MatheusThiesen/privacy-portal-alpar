@@ -21,7 +21,7 @@ export function Header({ option, setOption }: HeaderProps) {
           </div>
 
           <nav>
-            <Link href="/">
+            <Link href="/" prefetch>
               <a
                 onClick={() => {
                   setOption("general");
@@ -31,7 +31,7 @@ export function Header({ option, setOption }: HeaderProps) {
                 Visão geral
               </a>
             </Link>
-            <Link href="privacy-policy">
+            <Link href="privacy-policy" prefetch>
               <a
                 onClick={() => {
                   setOption("privacy-policy");

@@ -58,10 +58,7 @@ const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({ setOption }) => {
             </Summary>
 
             <div className={styles.link}>
-              <Link
-                legacyBehavior
-                href="pdf/27-10-2021-Política_de_Privacidade.pdf"
-              >
+              <Link href="pdf/27-10-2021-Política_de_Privacidade.pdf">
                 <a target="_blank">
                   Baixar versão PDF <BiChevronRight />
                 </a>

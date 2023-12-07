@@ -32,7 +32,7 @@ export function Header({ option, setOption }: HeaderProps) {
                 Visão geral
               </a>
             </Link>
-            <Link legacyBehavior href="privacy-policy">
+            <Link href="privacy-policy">
               <a
                 onClick={() => {
                   setOption("privacy-policy");

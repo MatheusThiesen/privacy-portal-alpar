@@ -17,6 +17,8 @@ interface PrivacyPolicyProps {
 const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({ setOption }) => {
   useEffect(() => {
     setOption("privacy-policy");
+
+    // eslint-disable-next-line
   }, []);
 
   return (

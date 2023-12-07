@@ -21,7 +21,7 @@ export const transporter = nodemailer.createTransport({
   },
 });
 
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+export async function mail(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { name, email, type } = req.body as MailProps;
 
@@ -40,7 +40,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       subject: subject,
       html: html,
     });
-
 
     return res.status(200).json({});
   } else {

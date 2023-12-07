@@ -1,6 +1,6 @@
+import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
-import type { NextPage } from "next";
 import styles from "./styles.module.scss";
 
 interface AccordionProps {
@@ -43,6 +43,8 @@ export const Accordion: NextPage<AccordionProps> = ({
     }));
 
     setQuestions(questions);
+
+    // eslint-disable-next-line
   }, []);
 
   function handleActive(title: string) {

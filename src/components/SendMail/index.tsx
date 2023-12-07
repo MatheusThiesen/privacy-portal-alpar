@@ -1,10 +1,10 @@
-import { FormEvent, ChangeEvent, useState, useRef, useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import type { NextPage } from "next";
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
-import styles from "./styles.module.scss";
 import { api } from "../../services/api";
 import { SentMail } from "../SentMail";
+import styles from "./styles.module.scss";
 
 interface MailProps {
   type: string;
@@ -26,7 +26,7 @@ export const SendMail: NextPage<SendMailProps> = () => {
     () => {
       setIsValid(validMail());
     },
-    //@ts-ignore
+    // eslint-disable-next-line
     [recaptchaRef, data, update]
   );
 

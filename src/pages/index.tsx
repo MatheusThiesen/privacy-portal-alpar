@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import { Accordion } from "../components/Accordion";
@@ -34,7 +35,7 @@ const Home: NextPage<HomeProps> = ({ setOption }) => {
           </p>
         </div>
         <div className={styles.images}>
-          <img src="/images/secure-files.svg" alt="" />
+          <Image src="/images/secure-files.svg" alt="" />
         </div>
 
         <div className={styles.content}>

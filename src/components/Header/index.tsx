@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Burger from "../Burguer";
@@ -16,7 +17,7 @@ export function Header({ option, setOption }: HeaderProps) {
 
         <div className={styles.headerContent}>
           <div className={styles.headerContainerLogo}>
-            <img src="/images/logo-alpar.svg" alt="Alpar do Brasil" />
+            <Image src="/images/logo-alpar.svg" alt="Alpar do Brasil" />
             <span>Privacidade</span>
           </div>
 

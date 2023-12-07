@@ -41,7 +41,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       html: html,
     });
 
-    console.log(response);
 
     return res.status(200).json({});
   } else {

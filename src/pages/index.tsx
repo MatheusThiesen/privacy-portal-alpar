@@ -79,12 +79,15 @@ const Home: NextPage<HomeProps> = ({ setOption }) => {
               digitais, por meio de sites e aplicativos.
             </p>
 
-            <Link href="privacy-policy">
+            <Link legacyBehavior href="privacy-policy">
               <a onClick={() => setOption("privacy-policy")}>
                 Política de privacidade na íntegra <BiChevronRight />
               </a>
             </Link>
-            <Link href="pdf/27-10-2021-Política_de_Privacidade.pdf">
+            <Link
+              legacyBehavior
+              href="pdf/27-10-2021-Política_de_Privacidade.pdf"
+            >
               <a target="_blank">
                 Baixar versão PDF <BiChevronRight />
               </a>

@@ -1,12 +1,14 @@
+"use client";
+
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Summary } from "../components/Summary";
-import styles from "../styles/PrivacyPolicy.module.scss";
 import Link from "next/link";
+import { useEffect } from "react";
 import { BiChevronRight } from "react-icons/bi";
 import { Accordion } from "../components/Accordion";
-import { useEffect } from "react";
 import { SendMail } from "../components/SendMail";
+import { Summary } from "../components/Summary";
+import styles from "../styles/PrivacyPolicy.module.scss";
 
 interface PrivacyPolicyProps {
   setOption: React.Dispatch<React.SetStateAction<"general" | "privacy-policy">>;
@@ -54,7 +56,10 @@ const PrivacyPolicy: NextPage<PrivacyPolicyProps> = ({ setOption }) => {
             </Summary>
 
             <div className={styles.link}>
-              <Link href="pdf/27-10-2021-Política_de_Privacidade.pdf">
+              <Link
+                legacyBehavior
+                href="pdf/27-10-2021-Política_de_Privacidade.pdf"
+              >
                 <a target="_blank">
                   Baixar versão PDF <BiChevronRight />
                 </a>

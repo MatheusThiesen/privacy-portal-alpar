@@ -1,7 +1,7 @@
-import React from "react";
 import Link from "next/link";
-import styles from "./styles.module.scss";
+import React from "react";
 import Burger from "../Burguer";
+import styles from "./styles.module.scss";
 
 interface HeaderProps {
   option: "general" | "privacy-policy";
@@ -21,7 +21,7 @@ export function Header({ option, setOption }: HeaderProps) {
           </div>
 
           <nav>
-            <Link href="/" prefetch>
+            <Link legacyBehavior href="/">
               <a
                 onClick={() => {
                   setOption("general");
@@ -31,7 +31,7 @@ export function Header({ option, setOption }: HeaderProps) {
                 Visão geral
               </a>
             </Link>
-            <Link href="privacy-policy" prefetch>
+            <Link legacyBehavior href="privacy-policy">
               <a
                 onClick={() => {
                   setOption("privacy-policy");

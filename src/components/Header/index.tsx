@@ -22,7 +22,7 @@ export function Header({ option, setOption }: HeaderProps) {
           </div>
 
           <nav>
-            <Link legacyBehavior href="/">
+            <Link href="/">
               <a
                 onClick={() => {
                   setOption("general");
